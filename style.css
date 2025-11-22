@@ -1,0 +1,689 @@
+/* COLORS */
+:root {
+    --green: #5EA728;
+    --green-dark: #376A12;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.custom-nav {
+    height: 86px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #efefef;
+}
+
+.logo-wrap {
+    margin-right: 40px;
+}
+
+.nav-logo {
+    height: 36px;   /* Exactly matching screenshot height */
+}
+
+/* NAV LINKS */
+.nav-menu .nav-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-dark);
+    margin: 0 25px;                /* EXACT spacing like screenshot */
+    letter-spacing: 0.4px;
+    transition: 0.3s ease;
+}
+
+.nav-menu .nav-link:hover {
+    color: var(--green);
+}
+
+.active-link {
+    color: var(--green) !important;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 742px;
+    background-image: url("images/Group\ 32.png"); /* Replace with your hero image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 18px;  /* EXACT from screenshot */
+    margin-bottom: 40px;
+}
+
+/* BUTTON — transparent hover */
+.hero-btn {
+    background: var(--green);
+    border: 2px solid var(--green);
+    padding: 14px 55px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    border: 2px transparent;
+    color: #fff;
+}
+
+
+
+  .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+            color: #2d2d2d;
+        }
+
+        .info-table {
+            width: 100%;
+        }
+
+        .info-row {
+            display: flex;
+            min-height: 60px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .info-row:nth-child(odd) {
+            background-color: #f5f5f5;
+        }
+
+        .info-row:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .info-label {
+            flex: 0 0 250px;
+            padding: 20px 30px;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #2d2d2d;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-value {
+            flex: 1;
+            padding: 20px 30px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #2d2d2d;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .info-value-split {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+
+        .info-value-split > div {
+            flex: 1;
+            text-align: right;
+        }
+
+        .amenidades-list {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .book-btn-container {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .book-btn {
+            background-color: #4a7c3a;
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background: transparent;
+            color: #4a7c3a;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .info-row {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .info-label {
+                flex: none;
+                padding: 15px 20px 10px 20px;
+                font-size: 0.85rem;
+                border-bottom: none;
+            }
+
+            .info-value {
+                flex: none;
+                padding: 10px 20px 15px 20px;
+                font-size: 0.85rem;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .info-value-split {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .info-value-split > div {
+                text-align: left;
+            }
+
+            .book-btn {
+                padding: 12px 40px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-container {
+                padding: 0 15px;
+            }
+
+            .info-label,
+            .info-value {
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: 0.8rem;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+
+
+
+/* ========================================================= */
+/*                      TITLE SECTION                        */
+/* ========================================================= */
+
+.gallery-title-area {
+    width: 100%;
+    background: #FFFFFF;       /* White background as screenshot */
+    padding-top: 70px;
+    padding-bottom: 40px;      /* Space before the green block */
+}
+
+.gallery-title-fixed {
+    width: 553px;              /* EXACT Figma width */
+    height: 56px;              /* Figma height */
+    margin: 0 auto;            /* Centers the block on page */
+    text-align: left;          /* Left-aligns the text */
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;          /* Bold */
+    font-size: 40px;           /* EXACT size */
+    line-height: 60px;         /* EXACT line-height */
+    letter-spacing: 4px;       /* EXACT spacing */
+    text-transform: uppercase; /* EXACT */
+    color: #333333;            /* Exact screenshot color */
+}
+
+/* ========================================================= */
+/*                     GREEN GALLERY AREA                    */
+/* ========================================================= */
+
+.gallery-section {
+    background-color: #32630D; /* EXACT screenshot green */
+    padding-top: 80px;         /* exact spacing above images */
+    padding-bottom: 120px;     /* large spacing below */
+}
+
+/* Exact max-width like screenshot */
+.gallery-wrapper {
+    width: 1420px;
+    margin: 0 auto;
+}
+
+/* 3×2 grid as screenshot */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;                 /* EXACT spacing between images */
+}
+
+.gallery-item {
+    width: 100%;
+    height: 305px;             /* EXACT height of all images */
+    overflow: hidden;
+    background: #ddd;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+
+@media (max-width: 1400px) {
+    .gallery-wrapper {
+        width: 100%;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-title-fixed {
+        width: 100%;
+        font-size: 28px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-wrapper {
+        padding: 0 20px;
+    }
+
+    .gallery-item {
+        height: 210px;
+    }
+
+    .gallery-title-fixed {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+        line-height: 34px;
+        padding: 0 10px;
+    }
+}
+
+
+/* ================== SHARED BENEFICIARY SECTION ================== */
+
+.beneficiary-section {
+    background: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.beneficiary-container {
+    max-width: 1100px;       /* feels like screenshot width */
+    margin: 0 auto;
+}
+
+/* Headings (top center) */
+.beneficiary-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;         /* Bold */
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #333333;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+/* Inner content rows */
+.beneficiary-content {
+    margin-top: 10px;
+}
+
+/* Each line with icon + text */
+.beneficiary-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 26px;      /* vertical gap between rows */
+}
+
+/* Icon box */
+.benef-icon {
+    flex: 0 0 26px;           /* fixed pixel width to match screenshot */
+    margin-right: 18px;
+    margin-top: 2px;
+}
+
+.benef-icon img {
+    width: 22px;
+    height: auto;
+    display: block;
+}
+
+/* Text container */
+.benef-text {
+    flex: 1;
+}
+
+/* Main label (upper line) */
+.benef-label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+/* Sub text (second line, smaller, lighter) */
+.benef-sub {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 4px;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 991.98px) {
+    .beneficiary-container {
+        padding: 0 30px;
+    }
+
+    .beneficiary-title {
+        font-size: 24px;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+    }
+
+    .beneficiary-item {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .beneficiary-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .beneficiary-title {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .beneficiary-container {
+        padding: 0 20px;
+    }
+
+    .beneficiary-item {
+        margin-bottom: 18px;
+    }
+
+    .benef-label {
+        font-size: 13px;
+        letter-spacing: 1.6px;
+    }
+
+    .benef-sub {
+        font-size: 12px;
+        letter-spacing: 1.4px;
+    }
+}
+
+
+/* ================= MASTER PLAN SECTION ================= */
+
+.masterplan-section {
+    background: #ffffff;
+    padding-top: 80px;       /* space above heading */
+    padding-bottom: 60px;    /* space after image */
+    text-align: center;
+}
+
+/* Heading stays centered */
+.masterplan-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+/* FULL-WIDTH IMAGE (NO GAP LEFT/RIGHT) */
+.masterplan-image-full {
+    width: 100vw;        /* FULL browser width */
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+
+/* ===========================
+   RIGHT INFO SECTION
+   (Ciudad / Telefono / Zipcode)
+   =========================== */
+
+.right-info-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 0;
+    padding-left: 140px;       /* EXACT left position like screenshot */
+}
+
+/* Each row */
+.right-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;        /* GAP BETWEEN ROWS (pixel matched) */
+}
+
+/* Icons */
+.right-info-icon {
+    width: 18px;                /* very small exactly like screenshot */
+    height: auto;
+    margin-right: 16px;         /* icon → label spacing */
+    opacity: 1;
+}
+
+/* Bold Left Label */
+.right-info-label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-right: 8px;          /* label → value spacing */
+}
+
+/* Right Value text */
+.right-info-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    color: #333333;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+
+    .right-info-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .right-info-item {
+        margin-bottom: 16px;
+    }
+
+    .right-info-label,
+    .right-info-value {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .right-info-icon {
+        width: 16px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .right-info-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .right-info-item {
+        flex-direction: row;
+    }
+
+    .right-info-label,
+    .right-info-value {
+        font-size: 12px;
+    }
+}
+
+
+/* ===========================
+   PIXEL PERFECT FOOTER (FIGMA)
+   =========================== */
+
+.footer-section {
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #dcdcdc;   /* same thin line as screenshot */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* TEXT CONTAINER EXACT WIDTH: 483px */
+.footer-inner {
+    width: 483px;                    /* EXACT Figma width */
+    margin: 0 auto;                  /* centered block */
+}
+
+/* EXACT TEXT STYLE */
+.footer-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;                
+    font-size: 22px;                
+    line-height: 27px;           
+    color: #707070;                 
+    letter-spacing: 0px;           
+    text-align: left;              
+    margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+
+    .footer-inner {
+        width: 100%;
+        padding: 0 25px;
+    }
+
+    .footer-text {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .footer-inner {
+        padding: 0 20px;
+    }
+
+    .footer-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
